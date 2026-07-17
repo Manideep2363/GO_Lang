@@ -13,5 +13,5 @@ func main() {
 			factors = append(factors, i)
 		}
 	}
-	fmt.Printf("%d th factor of %d is: %d\n", k, n, factors[k-1])
+	fmt.Printf("%d th factor of %d is: %d\n", k, n, factors[len(factors)-k])
 }
