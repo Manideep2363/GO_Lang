@@ -18,15 +18,6 @@ func main() {
 	var i int
 	for i = 0; i < 3; i++ {
 		fmt.Println(i)
-		// var Name string
-		// var Age int
-		// var Marks int
-		fmt.Println("Enter name, age and marks of students separated by comma: ")
-		fmt.Scanf("%s,%d,%d", &Name, &Age, &Marks)
-		// s = Student{Name: Name, Age: Age, Marks: Marks}
-		// students = append(students, s)
-		// fmt.Println(students)
-		fmt.Println(Name, Age, Marks)
 	}
 
 	// for _, s := range students {

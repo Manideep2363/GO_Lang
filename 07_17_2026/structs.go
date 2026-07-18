@@ -35,7 +35,5 @@ func main() {
 		fmt.Sscanf(parts[1], "%d", &age)
 		fmt.Sscanf(parts[2], "%d", &marks)
 
-		fmt.Println(name)
-
 	}
 }
