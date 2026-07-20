@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func Producer(ch chan<- int) {
-	ch <- 10
+	ch <- 100
 }
 
 func Consumer(ch <-chan int) {

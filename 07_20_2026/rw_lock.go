@@ -13,7 +13,7 @@ func reader(id int, wg *sync.WaitGroup) {
 	defer wg.Done()
 
 	mu.RLock()
-	defer mu.RUnlock()
+	defer mu.RUnLock()
 
 	fmt.Println("reader", id, "reads: ", number)
 
