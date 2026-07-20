@@ -13,28 +13,29 @@ func worker(ctx context.Context, wg *sync.WaitGroup) {
 	for {
 		select {
 		case <-ctx.Done():
-			fmt.Println("Timed out")
-			fmt.Println(ctx.Err())
+			fmt.Println("Dead Line reached")
 			return
 		default:
 			fmt.Println("working")
 			time.Sleep(time.Second)
 		}
-
 	}
 
 }
 
 func main() {
-	ctx, cancel := context.WithTimeout(
+	deadline := time.Now().Add(3 * time.Second)
+
+	ctx, cancel := context.WithDeadline(
 		context.Background(),
-		4*time.Second,
+		deadline,
 	)
 	defer cancel()
+
 	var wg sync.WaitGroup
+
 	wg.Add(1)
 	go worker(ctx, &wg)
 
 	wg.Wait()
-
 }
