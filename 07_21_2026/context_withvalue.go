@@ -10,7 +10,7 @@ type contextKey string
 const userIDKey contextKey = "userID"
 
 func process(ctx context.Context) {
-	userId := ctx.Value(userIDKey)
+	userId := ctx.Value(userIKey)
 	fmt.Println(userId)
 
 }
